@@ -27,7 +27,7 @@ public class J11{
             public void mouseClicked(MouseEvent e){
                 System.out.println("Clicked");
                 Thread t = new Thread(d);
-                t.run();
+                t.start();
             }
         });
     }

@@ -36,9 +36,9 @@ public class Draw extends JPanel implements Runnable{
     }
     public void run(){
         while(true){
-            //repaint();
+            repaint();
             try{
-                Thread.sleep(100);
+                Thread.sleep(20);
             }catch(Exception e){}
 
             if(this.left()){
@@ -47,6 +47,8 @@ public class Draw extends JPanel implements Runnable{
             else if(this.right()){
                 this.xspeed -= this.universalSpeed;
             }
+
+            this.x += this.xspeed;
             
             if(this.top()){
                 this.yspeed = this.universalSpeed;
@@ -57,7 +59,7 @@ public class Draw extends JPanel implements Runnable{
             System.out.println(this.x + " " + this.y);
 
             this.y += this.yspeed;
-           repaint();
+            //repaint();
 
         }
     }
